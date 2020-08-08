@@ -30,17 +30,19 @@ const styles = StyleSheet.create({
     justifyContent: "center"
   },
   contianerSignin: {
-     flex: 3
+     flex: 4
   },
   title: {
     textAlign: 'center',
     color: '#fff',
     fontSize: 28,
+    fontFamily: "Roboto-Bold"
   },
   subTitle: {
     textAlign: 'center',
     color: '#fff',
     fontSize: 19,
     marginBottom: 20,
+    fontFamily: "Roboto-Regular"
   },
 });
