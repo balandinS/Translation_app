@@ -1,14 +1,16 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import FormComponent from '../FormComponent/FormComponent';
+import { useNavigation } from '@react-navigation/native'
 import InputComponent from '../UI/InputComponent';
 import Button from '../UI/ButtonComponents';
 import {COLORS} from '../../constans/Constans';
-import {useNavigation} from '@react-navigation/native';
+import navigator from '../../routers/utilsRoute'
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 const SigninComponent = () => {
   const navigation = useNavigation();
   const handleNavigation = () => {
-    navigation.navigate('HomeScreen');
+    navigator('HomeScreen', {}, navigation);
   };
   const handleEmailInput = (text) => {};
   const handlePasswordInput = (text) => {};
@@ -25,8 +27,8 @@ const SigninComponent = () => {
             label={'Password'}
             handleTextChange={handlePasswordInput}
           />
-          <Button backgroundColor={COLORS.orange} onPress={handleNavigation}>
-            <Text>Sign In</Text>
+          <Button backgroundColor={COLORS.black} onPress={handleNavigation}>
+            <Text style={{color: COLORS.white}}>Sign In</Text>
           </Button>
         </View>
       </FormComponent>

@@ -4,5 +4,7 @@ export const COLORS = {
     success: "#27ae60",
     yellow: "#f1c40f",
     defualt: "#7f8c8d",
-    orange: "#FD8700"
+    orange: "#fd8700",
+    white: "#fff",
+    black: "#2d3436"
 }

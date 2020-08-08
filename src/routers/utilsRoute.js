@@ -1,6 +1,3 @@
-import {useNavigation} from '@react-navigation/native';
-
-export default (route, params) => {
-  const navigation = useNavigation();
+export default (route, params, navigation) => {
   if (typeof route === 'string') navigation.navigate(route);
 };

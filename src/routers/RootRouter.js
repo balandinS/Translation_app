@@ -8,24 +8,10 @@ import HomeScreen from '../screens/HomeScreen';
 const RootStack = createStackNavigator();
 
 export default () => {
-  const options = {
-    loginOptions: {
-      title: '',
-      headerStyle: {
-        backgroundColor: '#0274BC',
-        shadowColor: 'transparent',
-        elevation:0 
-      },
-    },
-  };
   return (
     <NavigationContainer>
-      <RootStack.Navigator initialRouteName="LoginScreen">
-        <RootStack.Screen
-          name="LoginScreen"
-          component={LoginScreen}
-          options={options.loginOptions}
-        />
+      <RootStack.Navigator initialRouteName="LoginScreen" headerMode="none">
+        <RootStack.Screen name="LoginScreen" component={LoginScreen} />
         <RootStack.Screen name="HomeScreen" component={HomeScreen} />
       </RootStack.Navigator>
     </NavigationContainer>

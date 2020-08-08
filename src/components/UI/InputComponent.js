@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {StyleSheet, Text, View, TextInput} from 'react-native';
 import { COLORS } from '../../constans/Constans'
-import Icon from 'react-native-vector-icons/FontAwesome'
+import Icon from './IconComponent'
 const InputComponent = ({label, handleTextChange, typeField = 'none'}) => {
   const [isFocused, setIsFocus] = useState(false);
 
@@ -12,7 +12,7 @@ const InputComponent = ({label, handleTextChange, typeField = 'none'}) => {
     <View style={styles.inputGroup}>
       <Text style={styles.text}>{label}</Text>
       <View style={styles.containerInput}>
-        <Icon name="user" size={30} color="#7f8c8d"/>
+        <Icon />
         <TextInput
           textContentType={typeField}
           onBlur={handleFocusInput}
@@ -20,7 +20,7 @@ const InputComponent = ({label, handleTextChange, typeField = 'none'}) => {
           style={{
             ...styles.text,
             ...styles.input,
-            borderBottomColor: !isFocused ? '#000' : COLORS.orange,
+            borderBottomColor: !isFocused ? '#000' : COLORS.defualt,
           }}
           onChange={(text) => handleTextChange(text)}
         />

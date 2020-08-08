@@ -1,6 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import SigninComponent from '../components/SigninComponent/SigninComponent';
+import { COLORS } from '../constans/Constans';
 
 const LoginScreen = () => {
   return (
@@ -22,7 +23,7 @@ const styles = StyleSheet.create({
   contianer: {
     flex: 1,
     justifyContent: 'center',
-    backgroundColor: '#0274BC',
+    backgroundColor: COLORS.defualt,
     paddingHorizontal: 10,
   },
   conatinerTitle: {
