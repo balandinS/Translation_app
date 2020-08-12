@@ -1,11 +1,13 @@
 import React from 'react';
 import {StyleSheet, Text, ImageBackground, View} from 'react-native';
+import {useNavigation} from '@react-navigation/native'
 import {COLORS} from '../../constans/Constans';
 import Touchble from '../UI/TouchbleCard';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 const TouchbleCard = () => {
+  const navigation = useNavigation()
   return (
-    <Touchble>
+    <Touchble onPress={() => navigation.navigate('MessagesScreen')}>
       <View style={styles.imageContianer}>
         <ImageBackground
           style={styles.imageContianer}
