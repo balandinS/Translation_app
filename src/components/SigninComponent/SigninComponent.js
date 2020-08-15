@@ -20,11 +20,13 @@ const SigninComponent = () => {
         <View>
           <InputComponent
             label={'Email'}
+            icon='user'
             handleTextChange={handleEmailInput}
             typeField="emailAddress"
           />
           <InputComponent
             label={'Password'}
+            icon='unlock'
             handleTextChange={handlePasswordInput}
           />
           <Button backgroundColor={COLORS.black} onPress={handleNavigation}>

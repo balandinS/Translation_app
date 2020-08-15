@@ -3,10 +3,8 @@ import { StyleSheet, Text, View } from 'react-native'
 import NavigatorApp from './routers/RootRouter'
 const App = () => {
   return (
-    <NavigatorApp>
-      <Text>Hello</Text>
-    </NavigatorApp>
-  )
+    <NavigatorApp  />
+    )
 }
 
 export default App

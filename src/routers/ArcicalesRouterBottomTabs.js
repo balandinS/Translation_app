@@ -9,7 +9,7 @@ import Icon from '../components/UI/IconComponent';
 
 const Tab = createBottomTabNavigator();
 const TabMaterial = createMaterialBottomTabNavigator();
-const MessageRouterBottomTab = () => {
+const ArcicalesRouterBottomTabs = () => {
   const TabMaterialStyle = {
     backgroundColor: COLORS.black,
   };
@@ -59,4 +59,4 @@ const MessageRouterBottomTab = () => {
   );
 };
 
-export default MessageRouterBottomTab;
+export default ArcicalesRouterBottomTabs;

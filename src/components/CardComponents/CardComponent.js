@@ -1,13 +1,13 @@
 import React from 'react';
 import {StyleSheet, Text, ImageBackground, View} from 'react-native';
-import {useNavigation} from '@react-navigation/native'
+import {useNavigation} from '@react-navigation/native';
 import {COLORS} from '../../constans/Constans';
 import Touchble from '../UI/TouchbleCard';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
-const TouchbleCard = () => {
-  const navigation = useNavigation()
+const TouchbleCard = ({title, description, route}) => {
+  const navigation = useNavigation();
   return (
-    <Touchble onPress={() => navigation.navigate('MessagesScreen')}>
+    <Touchble onPress={() => navigation.navigate(route)}>
       <View style={styles.imageContianer}>
         <ImageBackground
           style={styles.imageContianer}
@@ -16,11 +16,8 @@ const TouchbleCard = () => {
               'https://images.pexels.com/photos/1112048/pexels-photo-1112048.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260',
           }}>
           <Text style={styles.about}>About</Text>
-          <Text style={styles.title}>SMS translation</Text>
-          <Text style={styles.description}>
-            Hello User in this app you can translate your SMS, touch for learn
-            more...
-          </Text>
+          <Text style={styles.title}>{title}</Text>
+          <Text style={styles.description}>{description}</Text>
         </ImageBackground>
       </View>
     </Touchble>
@@ -36,6 +33,8 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     justifyContent: 'center',
     paddingHorizontal: 20,
+    flex: .95
+    
   },
   image: {
     resizeMode: 'cover',
@@ -45,18 +44,18 @@ const styles = StyleSheet.create({
     fontFamily: 'Roboto-Bold',
     color: COLORS.defualt,
     fontSize: 16,
-    padding: 5
+    padding: 5,
   },
   title: {
     fontFamily: 'Roboto-Bold',
     color: COLORS.white,
     fontSize: 22,
-    padding: 5
+    padding: 5,
   },
   description: {
     fontFamily: 'Roboto-Regular',
     color: COLORS.white,
     fontSize: 18,
-    padding: 5
+    padding: 5,
   },
 });

@@ -2,9 +2,9 @@ import React from 'react'
 import { StyleSheet} from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
 
-export default () => {
+export default ({name, size, color}) => {
 Icon.loadFont()
-return <Icon name="user" size={30} color="#7f8c8d"/>
+return <Icon name={name} size={size} color={color}/>
 }
 
 const styles = StyleSheet.create({})

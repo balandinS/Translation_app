@@ -6,7 +6,8 @@ import {createStackNavigator} from '@react-navigation/stack';
 import 'react-native-gesture-handler';
 import LoginScreen from '../screens/LoginScreen';
 import HomeScreen from '../screens/HomeScreen';
-import MessageRouterBottomTab from './MessageRouterBottomTab'
+import MessageRouterBottomTab from './MessageRouterBottomTab';
+import ArcicalesRouterBottomTabs from './ArcicalesRouterBottomTabs'
 const RootStack = createStackNavigator();
 
 export default () => {
@@ -32,6 +33,7 @@ export default () => {
         <RootStack.Screen name="LoginScreen" component={LoginScreen} options={LoginScreenOptions}/>
         <RootStack.Screen name="HomeScreen" component={HomeScreen} options={HomeScreenOptions}/>
         <RootStack.Screen name="MessagesScreen" component={MessageRouterBottomTab} options={MessagesScreen}/>
+        <RootStack.Screen name="ArticaleScreen" component={ArcicalesRouterBottomTabs} options={MessagesScreen}/>
       </RootStack.Navigator>
     </NavigationContainer>
   );
